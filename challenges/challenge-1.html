@@ -1,0 +1,48 @@
+<html>
+
+        <head>
+          <style>
+            #colour-box {
+              width: 100px;
+              height: 100px;
+              position: absolute;
+              top: calc(50% - 50px);
+              left: calc(50% - 50px);
+              border: 1px solid;
+              background-color: black;
+            }
+            .red {
+              background: red;
+            }
+            .white {
+              background: white;
+            }
+            .blue {
+              background: blue;
+            }
+          </style>
+
+          <script>
+              // Get a reference to the colour box
+              var colourBox = document.querySelector('colour-box');
+
+              function changeColourBoxClass (newClass) {
+                colourBox.className = newClass;
+              }
+
+           </script>
+
+          <title>Reevoo JS test page</title>
+
+        </head>
+
+            <body>
+              <p>Link the colour changeColourBoxClass function so that it is activated when the buttons are clicked. Try to do this without changing the html - just using javascript. </p>
+              <div id="colour-box"></div>
+
+              <button id="red">Red</button>
+              <button id="white">White</button>
+              <button id="blue">Blue</button>
+            </body>
+
+        </html>

@@ -1,0 +1,87 @@
+<html>
+
+        <head>
+          <style>
+            #colour-box {
+              box-sizing: border-box;
+              width: 100px;
+              height: 100px;
+              position: absolute;
+              top: calc(50% - 50px);
+              left: calc(50% - 50px);
+              border: 5px solid;
+
+            }
+            #colour-box button {
+              position: absolute;
+              box-sizing: border-box;
+              height: 25px;
+              width: 100px;
+              font-weight: bold;
+              color: dark-grey;
+            }
+            #colour-box button:nth-child(1) {
+              top: -33px;
+              left: -5px;
+            }
+            #colour-box button:nth-child(2) {
+              transform: rotate(90deg);
+              left: 62px;
+              top: 32px;
+            }
+            #colour-box button:nth-child(3) {
+              top: 100px;
+              left: -5px;
+            }
+            #colour-box button:nth-child(4) {
+              transform: rotate(270deg);
+              left: -72px;
+              top: 32px;
+            }
+            p, li {
+              font-size: larger;
+            }
+          </style>
+
+
+          <title>JS challenge 2</title>
+
+        </head>
+
+            <body>
+              <p>The buttons have been deleted. Create an array with four colours in it.
+                Loop through the array and create four buttons and append them to the colour-box.
+                Give the buttons the id of the colour and the background-color of the colour.
+                You will need to change the changeColourBoxColour function to change the style rather than
+                class as the classes have been deleted from the CSS.</p>
+              <p><em>Hints: </em>
+              <ul>
+                <li>use <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style"><code>&lt;element&gt;.style.backgroundColor</code></a> to set the colour without using a class </li>
+                <li>you can create elements with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"><code>document.createElement</code></a></li>
+                <li>you can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"><code>appendChild</code></a> to add the new buttons</li>
+                <li>use any 4 <a href="https://en.wikipedia.org/wiki/Web_colors">web colour names</a> rather than a hex as it will also be a label for the button but make sure they are contrasting</li>
+
+              </ul></p>
+              <p><em>Extra credit:</em><br>
+              Make the buttons appear with a half second delay between so the buttons appear in turn</p>
+              <div id="colour-box"></div>
+
+              <script>
+                  // Array of colours
+                  var colours = ['red', 'green', 'yellow', 'skyblue'];
+
+
+                  // Get a reference to the colour box
+                  let colourBox = document.querySelector('#colour-box');
+
+                  function changeColourBoxColour () {
+                    // `this` is the button i've just clicked
+
+                    // change this to change the background colour rather than class
+                    colourBox.class = this.id;
+                  }
+
+              </script>
+            </body>
+
+        </html>

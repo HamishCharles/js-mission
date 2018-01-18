@@ -1,0 +1,88 @@
+<html>
+
+<head>
+  <style>
+    #colour-box {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: calc(50% - 100px);
+      left: calc(50% - 100px);
+      border: 5px solid;
+      background: black;
+      transition-property: background-color;
+      transition-duration: 100ms;
+      transition-delay: 100ms;
+      transition-timing-function: linear;
+      border-radius: 100px;
+      z-index: 1;
+    }
+
+    #colour-box button {
+      position: absolute;
+      box-sizing: border-box;
+      height: 100px;
+      width: 100px;
+      top: calc(50% - 50px);
+      left: calc(50% - 50px);
+      font-weight: bold;
+      color: dark-grey;
+      border-radius: 50px;
+      transition: 1s ease-in-out;
+      opacity: 0;
+    }
+
+    #colour-box #message {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      height: 195px;
+      width: 200px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: aliceblue;
+    }
+
+    #colour-box.active button {
+      opacity: 1;
+    }
+
+    #colour-box.active button:nth-child(2) {
+      transform: rotate(360deg) translateY(-160px);
+    }
+
+
+    #colour-box.active button:nth-child(3) {
+      transform: rotate(450deg) translateY(-160px);
+    }
+
+    #colour-box.active button:nth-child(4) {
+      transform: rotate(360deg) translateY(160px);
+    }
+
+    #colour-box.active button:nth-child(5) {
+      transform: rotate(270deg) translateY(-160px);;
+    }
+
+    p,
+    li {
+      font-size: larger;
+    }
+  </style>
+
+
+  <title>JS challenge 3</title>
+
+</head>
+
+<body>
+
+  <div id="colour-box">
+    <div id="message">Hello</div>
+  </div>
+
+
+  <script src="challenge-3.js"></script>
+</body>
+
+</html>
